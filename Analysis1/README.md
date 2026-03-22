@@ -1,6 +1,6 @@
 Economic analyses of markets are commonplace, but frequently constrained to markets with immediate practical applications.
 However, video games such as Hypixel's Skyblock (which is a open-world RPG programmed inside of Minecraft), often offer advanced economies with unusual governmental policies, economic systems, and social cultures.
-As a result, we've elected to study the a subset of the economy of Hypixel Skyblock.
+As a result, we've elected to study a subset of the economy of Hypixel Skyblock.
 
 In particular, we observed the stock of eight in-game items and analyzed their behavior in several ways.
 The item names are in the following table.
@@ -44,6 +44,10 @@ Knowing the price of one gives no information about the price of another.
 
 ![Correlation Heatmap](figures/heatmap.png)
 
+To ensure no p-hack occurs, we applied Bonferroni correction to the 28 pairwise tests.
+After applying this, no pair achieved significance at the adjusted threshold of p < 0.0018.
+This implies that, despite the high quantity of tests, none were able to meet the threshold needed to suggest a true inter-item correlation.
+
 # Autocorrelation using Lag-Prices
 
 Diamond and Crimson Essence are the only items to have a statistically significant correlation between price and lag-price, and this correlation occurs between the current price and the price from one hour ago.
@@ -65,11 +69,11 @@ This means that the Crimson Essence item's noise is over 350 times larger than t
 
 A comparison may be drawn:
 
-Salt Cubes and Magical Mushroom Soups may be considered stable investments, akin to buying stock in utilities.
+Wither Essence and Crimson Essence may be considered stable investments, akin to buying stock in utilities.
 While they may vary heavily, they still vary minimally compared to other investments, and thus are far better than other investments.
 We expect them not to dip too heavily, at the expense of also not rising enough to be a viable speculation.
 
-Meanwhile, Crimson Essence is so incredibly volatile that it's value can not reliably be estimated without a very large sample size.
+Meanwhile, Salt Cubes are so incredibly volatile that its value can not reliably be estimated without a very large sample size.
 It is extremely liable to jump around.
 It may be useful for speculation, as it can sometimes increase in value dramatically, but it can decrease as readily as it can increase, making it an unreliable investment.
 
