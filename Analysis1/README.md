@@ -1,13 +1,32 @@
+Economic analyses of markets are commonplace, but frequently constrained to markets with immediate practical applications.
+However, video games such as Hypixel's Skyblock (which is a open-world RPG programmed inside of Minecraft), often offer advanced economies with unusual governmental policies, economic systems, and social cultures.
+As a result, we've elected to study the a subset of the economy of Hypixel Skyblock.
+
+In particular, we observed the stock of eight in-game items and analyzed their behavior in several ways.
+The item names are in the following table.
+We used a line-plot, an inter-item correlation, lag-price correlation, and a volatility metric.
+
+| Item name            | Item ID              |
+|----------------------|----------------------|
+| Diamond              | DIAMOND              |
+| Redstone             | REDSTONE             |
+| Magical Mushroom Soup | MAGIC_MUSHROOM_SOUP |
+| Vial of Venom        | VIAL_OF_VENOM        |
+| Salt Cube            | SALT_CUBE            |
+| Diamonite            | DIAMONITE            |
+| Wither Essence       | ESSENCE_WITHER       |
+| Crimson Essence      | ESSENCE_CRIMSON      |
+
 # Item Stock Behavior
 
 Eight items were tested.
-We analyzed the behavior of the percent change to returns over time, quantized to one-hour blocks.
+We analyzed the behavior of the returns over time, quantized to one-hour blocks.
 The items exhibit a timeseries plot that visually appears consistent with the random behavior of Brownian motion, which may be worth studying.
 
 ![Timeseries](figures/timeseries.png)
 
 | Item | Mean Price | Std | CV | Min | Max | N |
-|------|-----------|-----|-----|-----|-----|---|
+|------|------------|-----|----|-----|-----|---|
 | Diamond | 9.44 | 3.14 | 0.3320 | 5.50 | 26.20 | 181 |
 | Diamonite | 2620790.54 | 369648.80 | 0.1410 | 1499999.80 | 4999999.70 | 180 |
 | Crimson Essence | 1257.27 | 155.32 | 0.1235 | 982.20 | 1742.50 | 181 |
@@ -33,6 +52,9 @@ As a result, I hypothesize that the one-hour significant lag relation may be cau
 
 ![Correlation Heatmap](figures/autocorrelation.png)
 
+From a (somewhat) practical perspective, this implies that a profitable strategy could be created using pure Bazaar trading.
+More particularly, the evidence suggests that the Bazaar may not be weak-form efficient for these items, and a simple momentum strategy may be capable of yielding positive returns.
+
 # Volatility
 
 The market is very volatile, but the volatility varies.
@@ -52,7 +74,7 @@ It is extremely liable to jump around.
 It may be useful for speculation, as it can sometimes increase in value dramatically, but it can decrease as readily as it can increase, making it an unreliable investment.
 
 | Item | Volatility |
----------------------
+|------|------------|
 | Diamond | 7.118146 |
 | Diamonite | 15.170113 |
 | Crimson Essence | 352.530116 |
@@ -62,8 +84,8 @@ It may be useful for speculation, as it can sometimes increase in value dramatic
 | Salt Cube | 5.569963 |
 | Vial of Venom | 13.178217 |
 
+# Future Steps
 
-
-
-
+We are currently interested in analyzing a subset of the S&P 500 in a similar way.
+Comparing Hypixel Skyblock to the S&P 500 will inform us of the sophistication of gamers, and possibly also give us an idea of what strategies they may be using.
 
