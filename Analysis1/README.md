@@ -75,14 +75,14 @@ It may be useful for speculation, as it can sometimes increase in value dramatic
 
 | Item | Volatility |
 |------|------------|
-| Diamond | 7.118146 |
-| Diamonite | 15.170113 |
-| Crimson Essence | 352.530116 |
-| Wither Essence | 31.594726 |
-| Magical Mushroom Soup | 5.887288 |
-| Redstone | 6.224032 |
-| Salt Cube | 5.569963 |
-| Vial of Venom | 13.178217 |
+| Diamond | 37.205532 |
+| Diamonite | 10.758417 |
+| Crimson Essence | 4.239828 |
+| Wither Essence | 4.052143 |
+| Magical Mushroom Soup | 94.032288 |
+| Redstone | 65.777288 |
+| Salt Cube | 203.812004 |
+| Vial of Venom | 20.957374 |
 
 # Future Steps
 

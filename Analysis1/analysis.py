@@ -98,7 +98,7 @@ plt.savefig("figures/autocorrelation.png", dpi=150)
 
 # 4. Volatility
 
-cv = returns.std() / returns.mean().abs()
+cv = returns.std() * np.sqrt(24 * 365)
 print(cv)
 
 fig, ax = plt.subplots(figsize=(10, 5))
@@ -127,9 +127,9 @@ print(summary.to_string())
 print()
 
 print("| Item | Mean Price | Std | CV | Min | Max | N |")
-print("|------|-----------|-----|-----|-----|-----|---|")
+print("|------|------------|-----|----|-----|-----|---|")
 for item, row in summary.iterrows():
-    name = nice_name_map.get(item, item)
+    name = nice_name_map.get(item)
     print(f"| {name} | {row['mean_price']:.2f} | {row['std_price']:.2f} | {row['coeff_variation']:.4f} | {row['min_price']:.2f} | {row['max_price']:.2f} | {int(row['n_observations'])} |")
 
 
