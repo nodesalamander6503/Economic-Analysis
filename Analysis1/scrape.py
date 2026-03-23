@@ -2,6 +2,8 @@ import sqlite3
 import time
 import json
 import requests
+import yfinance as yf
+import pandas as pd
 
 item_list = [
     "DIAMOND",
@@ -36,4 +38,21 @@ with sqlite3.connect("skyblock-1.db") as conn:
             )
     conn.commit()
 
-print(f"Done. Scraped {len(item_list)} items.")
+tickers = ["SPY", "GLD", "TLT", "USO", "AAPL", "JPM", "PFE", "VNQ"]
+frames = []
+for ticker in tickers:
+    print(f"Downloading {ticker}...")
+    stock = yf.Ticker(ticker)
+    hist = stock.history(period="6mo", interval="1d")
+    hist = hist[["Close"]].reset_index()
+    hist.columns = ["timestamp", "buy_price"]
+    hist["item"] = ticker
+    frames.append(hist)
+
+df = pd.concat(frames, ignore_index=True)
+df.to_csv("yfinance-1.csv", index=False)
+
+
+
+
+
